@@ -1,0 +1,176 @@
+
+.section{
+    padding: 70px 0;
+    position: relative;
+    background: $white-color;
+
+    .row + .category{
+        margin-top: $margin-base-vertical;
+    }
+}
+.section-navbars{
+    padding-bottom: 0;
+}
+
+.section-full-screen{
+    height: 100vh;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    h2 {
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    &:after {
+        content: '';
+        width: 100px;
+        height: 3px;
+        background-color: orangered;
+        display: inline-block;
+        position: relative;
+        bottom: 10px;
+    }
+}
+
+.clear-filter{
+    &:after,
+    &:before{
+        display: none;
+    }
+
+    &[filter-color="orange"]{
+        @include linear-gradient(rgba($black-color,.20), rgba(224, 23, 3, 0.6));
+    }
+}
+
+.code {
+    background: #111;
+    border: 1px solid #ccc !important;
+    border-radius: 8px;
+    padding: 1em !important;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+[data-background-color="orange"]{
+    background-color: $orange-bg;
+}
+[data-background-color="black"]{
+    background-color: $black-color;
+}
+[data-background-color="primary"]{
+    background-color: $primary-color;
+}
+[data-background-color]:not([data-background-color="gray"]){
+    color: $white-color;
+
+    .title,
+    .social-description h2,
+    p,
+    p.blockquote,
+    p.blockquote small{
+        color: $white-color;
+    }
+
+    .separator{
+        background-color: $white-color;
+    }
+
+    .navbar.bg-white p{
+        color: $default-color;
+    }
+
+    h1,h2,h3,h4,h5,h6,a:not(.btn):not(.dropdown-item),
+    .icons-container{
+      color: $white-color;
+    }
+
+    .input-group-text,
+    .form-group.no-border .input-group-text,
+    .input-group.no-border .input-group-text{
+      color: $opacity-8;
+    }
+
+    .description,
+    .social-description p{
+        color: $opacity-8;
+    }
+
+    p.blockquote{
+        border-color: $opacity-2;
+    }
+
+    //radio and checkboxes
+    .checkbox label::before,
+    .checkbox label::after,
+    .radio label::before,
+    .radio label::after{
+        border-color: $opacity-2;
+    }
+
+    .checkbox label::after,
+    .checkbox label,
+    .radio label{
+        color: $white-color;
+    }
+
+    .checkbox input[type="checkbox"]:disabled + label,
+    .radio input[type="radio"]:disabled + label  {
+        color: $white-color;
+    }
+
+    .radio input[type="radio"]:not(:disabled):hover + label::after,
+    .radio input[type="radio"]:checked + label::after {
+        background-color: $white-color;
+        border-color: $white-color;
+    }
+
+    //inputs
+    @include input-coloured-bg($opacity-5, $white-color, $white-color, $transparent-bg, $opacity-1, $opacity-2);
+
+    //buttons
+    .btn.btn-simple{
+        background-color: $transparent-bg;
+        border-color: $opacity-5;
+        color: $white-color;
+
+        &:hover,
+        &:focus,
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active,
+        &:not(:disabled):not(.disabled):active:focus,
+        &:not(:disabled):not(.disabled).active:focus,
+        &:active:hover,
+        &.active:hover,
+        .show > &.dropdown-toggle,
+        .show > &.dropdown-toggle:focus,
+        .show > &.dropdown-toggle:hover {
+            background-color: $transparent-bg;
+            border-color: $white-color;
+            color: $white-color;
+        }
+    }
+
+    //tabs
+    .nav-tabs{
+        > .nav-item{
+            >.nav-link{
+                i.now-ui-icons{
+                    color: $white-color;
+                }
+            }
+        }
+    }
+
+    &.section-nucleo-icons .icons-container i:nth-child(6){
+        color: $white-color;
+    }
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
