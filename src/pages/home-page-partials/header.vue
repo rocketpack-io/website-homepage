@@ -5,8 +5,8 @@
         style="background-image:url('img/header.jpg')"
       >
       </parallax> -->
-      <div class="hero">
-        <div class="container">
+      <div class="container">
+        <div class="d-flex align-items-center">
           <img class="hero-img" src="img/ide_welcome.png" />
           <div class="hero-text">
             <!-- <img class="n-logo" src="img/now-logo.png" alt="" /> -->
@@ -19,8 +19,6 @@
               <a class="btn btn-white" href="/#/get-started">Get Started</a>
               <a class="btn btn-danger" href="//console.rocketpack.io/">Developer Console</a>
             </div>
-          </div>
-          <div class="text-center">
           </div>
         </div>
       </div>
